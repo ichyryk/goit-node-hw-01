@@ -1,5 +1,4 @@
 const contacts = require("./contacts");
-// console.log(contacts.listContacts());
 
 const { Command } = require('commander');
 const program = new Command();
@@ -34,4 +33,3 @@ async function invokeAction({ action, id, name, email, phone }) {
 }
 
 invokeAction(argv);
-
