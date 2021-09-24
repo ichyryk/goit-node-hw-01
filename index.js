@@ -21,11 +21,17 @@ async function invokeAction({ action, id, name, email, phone }) {
     
     case "get":
       return await contacts.getContactById(id);
+    
+    case "remove":
+      return await contacts.removeContact(id);
+    
+    case "add":
+      return await contacts.addContact(name, email, phone);
 
     default:
       console.warn('\x1B[31m Unknown action type!');
   }
 }
 
-invokeAction(argv)
+invokeAction(argv);
 
