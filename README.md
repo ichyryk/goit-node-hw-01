@@ -4,7 +4,7 @@
 
 <a href="https://ibb.co/56ZgtCn"><img src="https://i.ibb.co/2yJ1mRs/contacts-list.png" alt="contacts-list" border="0" /></a>
 
- # Отримуєння контакту по id
+ # Отримання контакту по id
 
  node index.js --action get --id 5
 
