@@ -14,7 +14,19 @@ async function listContacts() {
     }
 };
 
+async function getContactById(contactId) { 
+    try {
+        const data = await fs.readFile(contactsPath);
+        const contacts = JSON.parse(data);
+        const contact = contacts.find(item => item.id === Number(contactId));
+        console.table(contact);
+    } catch (error) { 
+        throw error;
+    }
+}
+
 
 module.exports = {
     listContacts,
+    getContactById,
 }

@@ -17,7 +17,10 @@ const argv = program.opts();
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-    return await contacts.listContacts();
+      return await contacts.listContacts();
+    
+    case "get":
+      return await contacts.getContactById(id);
 
     default:
       console.warn('\x1B[31m Unknown action type!');
